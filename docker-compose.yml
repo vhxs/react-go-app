@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=db-user
+      - POSTGRES_PASSWORD=shittypassword
+      - POSTGRES_DB=testdb
+    volumes:
+      - ./scripts/create_table.sql:/docker-entrypoint-initdb.d/create_table.sql
+    ports:
+      - "5432:5432"
+  backend:
+    build: backend/
+    ports:
+      - "8090:8090"
+    depends_on:
+      - db
+  frontend:
+    build: frontend/
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
