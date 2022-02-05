@@ -2,7 +2,7 @@ Frontend
 - javascript
 - react because it's an awesome frontend framework (Facebook)
 - material ui for pretty components (Google)
-- axios to make http requests to backend's api, better than just `fetch`
+- ~~axios to make http requests to backend's api, better than just `fetch`~~ looks like `fetch` is part of node.js now, maybe use that instead?
 
 
 Backend
