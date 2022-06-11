@@ -1,3 +1,5 @@
+Me attempting to learn React, Go, and docker simultaneously
+
 Frontend
 - javascript
 - react because it's an awesome frontend framework (Facebook)
